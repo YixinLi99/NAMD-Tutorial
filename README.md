@@ -13,9 +13,11 @@
 `(base) Yixins-MacBook-Pro-2:dipeptide_e yixinli$ /Users/yixinli/NAMD_2.14/namd2 md0.dipwat.conf > Out_md0.Dipwat.logyx`
 
 
-新建一个terminal
+start a new terminal
 `tail -f Out_md0.Dipwat.logyx`
-就会实时更新进展
+it will update all the changes to the file 
+`tail Out_md0.Dipwat.logyx`
+it will give the last 10 lines of the file
 
 
 - [x] Task1:
@@ -34,6 +36,8 @@ How’s the evolution of energy/temperture
 
 `(base) Yixins-MacBook-Pro-2:dipeptide_e yixinli$ cat Out_md0.Dipwat.logyx | grep -i etitle > Out_md0.Dipwat.logyx.etitle`
 
+how to put the two together? 
+
 ###### Instructions：
 Inspect the md0 log file, there should be lines starting with "ENERGY:" 
 followed by many values, one of which is the temperature, another is the total energy,
@@ -43,7 +47,7 @@ versus time and total energy versus time
 (for example with a software like gnuplot) it would be great, 
 otherwise just get familiar with them for now.
 
-###### How to install Gnuplot?
+###### Step 1: Install Gnuplot
 
 ```
 /bin/zsh -c "$(curl -fsSL https://gitee.com/cunkai/HomebrewCN/raw/master/Homebrew.sh)"
@@ -54,8 +58,12 @@ brew install gnuplot
 ```
 	> http://people.duke.edu/~hpgavin/gnuplot.html
 
-*Another recommendation: you should not start md1 
-if you don't see the "End of Program" statement at the end of the log of md0.
+###### Step 1: Enter Gnuplot and Plot
+
+```
+(base) Yixins-MacBook-Pro-2:dipeptide_e yixinli$ gnuplot
+gnuplot> plot "Out_md0.Dipwat.logyx.en" u 2:12
+```
 
 ------------------------------------------------------
 
@@ -78,6 +86,9 @@ To do so,
 	**CellBasisVector**, **CellOrigin**, **reinitvels**, **temperature $temperature**, **seta,b,c**, **minimize**, and **PME**
 	comment in the first three lines (so that md1 will restart from md0);
 just like I instructed you to do in the original tutorial on NAMD.
+
+*Another recommendation: you should not start md1 
+if you don't see the "End of Program" statement at the end of the log of md0.
 
 - [ ] Task 4: 
 Create md2 as a restart from md1 (so that you'll have 15 ns in total) and visualise them with VMD. 
