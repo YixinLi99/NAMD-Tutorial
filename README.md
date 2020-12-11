@@ -1,6 +1,6 @@
 # NAMD-Tutorials
 
-Simulations of Dipeptide with Minimisation and Equilibrum 
+## Simulations of Dipeptide with Minimisation and Equilibrum, md0
 
 ###### Step 1: Install NAMD & Dipeptide_e Files
 
@@ -18,7 +18,7 @@ Simulations of Dipeptide with Minimisation and Equilibrum
 就会实时更新进展
 
 
-Task1:
+- [x] Task1:
 1. Installed VMD 
 2. Visualise dcd projectroy file 
 3. Upload the dcd projector file 
@@ -27,23 +27,7 @@ Task1:
 ###### Instructions：
 Visualize the md0 dcd trajectory file on VMD, by first uploading the prmtop file and then uploading the dcd on top of it.
 
-
-Task2:
-Md0 minimisation of 
-Completed simulated 
-Create md1 and simulate from md0
-(Continuation of md0)
-
-新建一个file：
-`touch file_name.conf`
-
-###### Instructions：
-create a md1 conf file, to be a simulation that would 
-restart after the end of md0. To do so, remember to remove the lines with 
-CellBasisVector, CellOrigin, reinitvels, temperature $temperature, and minimize,
-just like I instructed you to do in the original tutorial on NAMD.
-
-Task 3:
+- [x] Task 2:
 How’s the evolution of energy/temperture
 
 `(base) Yixins-MacBook-Pro-2:dipeptide_e yixinli$ cat Out_md0.Dipwat.logyx | grep -i energy > Out_md0.Dipwat.logyx.en`
@@ -68,11 +52,49 @@ brew install gnuplot
 
 (base) Yixins-MacBook-Pro-2:~ yixinli$ gnuplot
 ```
->> http://people.duke.edu/~hpgavin/gnuplot.html
+	> http://people.duke.edu/~hpgavin/gnuplot.html
 
-Another recommendation: you should not start md1 
+*Another recommendation: you should not start md1 
 if you don't see the "End of Program" statement at the end of the log of md0.
 
+------------------------------------------------------
 
+## Simulation without the CELL
 
-## Simulation with Non-Periodic Boundary Conditions
+- [x] Task3:
+Md0 minimisation of 
+Completed simulated 
+Create md1 and simulate from md0
+(Continuation of md0)
+
+新建一个md1 file：
+`touch file_name.conf`
+
+###### Instructions：
+create a md1 conf file, to be a simulation that would 
+restart after the end of md0. 
+To do so,
+	remember to remove the lines with: 
+	**CellBasisVector**, **CellOrigin**, **reinitvels**, **temperature $temperature**, **seta,b,c**, **minimize**, and **PME**
+	comment in the first three lines (so that md1 will restart from md0);
+just like I instructed you to do in the original tutorial on NAMD.
+
+- [ ] Task 4: 
+Create md2 as a restart from md1 (so that you'll have 15 ns in total) and visualise them with VMD. 
+Try to set the representation so that the entire proline dipeptide (not just the PRO) is set with "Licorice". 
+Remember: PRO is just the center residue among three, you must discover which are the resnames (or resids) of the other two, by clicking on any of their atoms in VMD.
+
+- [ ] Task 5: 
+Use gnuplot to make sure that the energy (u 2:12) and the temperature (u 2:13) behave as you expect. Do this for md0, md1, and md2.
+
+- [ ] Task 6: 
+Use cpptraj to calculate the rmsd and hydrogen bonds of the proline dipeptide. I am attaching a useful script that can be used.
+```
+export AMBERHOME=/home/alessandro/Documents/amber18
+source $AMBERHOME/amber.sh
+(please, modify "/home/alessandro/Documents/amber18" with the appropriate path)
+
+and then to execute cpptraj itself:
+
+$AMBERHOME/bin/cpptraj -i example.cpptraj
+```
