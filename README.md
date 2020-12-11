@@ -35,7 +35,7 @@ Create md1 and simulate from md0
 (Continuation of md0)
 
 新建一个file：
-touch file_name.conf
+`touch file_name.conf`
 
 ###### Instructions：
 create a md1 conf file, to be a simulation that would 
