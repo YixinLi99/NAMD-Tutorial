@@ -75,7 +75,7 @@ Completed simulated
 Create md1 and simulate from md0
 (Continuation of md0)
 
-新建一个md1 file：
+Create a new md1 file via terminal:
 `touch file_name.conf`
 
 ###### Instructions：
@@ -88,7 +88,7 @@ To do so,
 just like I instructed you to do in the original tutorial on NAMD.
 
 *Another recommendation: you should not start md1 
-if you don't see the "End of Program" statement at the end of the log of md0.
+if you don't see the "End of Program" statement at the end of the log of md0.*
 
 - [ ] Task 4: 
 Create md2 as a restart from md1 (so that you'll have 15 ns in total) and visualise them with VMD. 
