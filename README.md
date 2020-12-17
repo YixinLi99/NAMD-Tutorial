@@ -112,7 +112,11 @@ $AMBERHOME/bin/cpptraj -i example.cpptraj
 
 ###### Install AmberTools 
 make sure you've installed conda (which I did)
+
 ```conda create --name AmberTools20```
+
 ```conda activate AmberTools20```
+
 ```conda install -c conda-forge ambertools=20```
+
 <useful links>(https://ambermd.org/GetAmber.php)
