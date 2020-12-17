@@ -120,3 +120,6 @@ make sure you've installed conda (which I did)
 ```conda install -c conda-forge ambertools=20```
 
 <useful links>(https://ambermd.org/GetAmber.php)
+
+To activate AmberTools20, you just simply need to type:
+```conda activate AmberTools20```
