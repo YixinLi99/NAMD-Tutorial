@@ -123,3 +123,30 @@ make sure you've installed conda (which I did)
 
 To activate AmberTools20, you just simply need to type:
 ```conda activate AmberTools20```
+
+`cpptraj -i example.cpptraj`
+
+After Execution, you want to have a look at the files:
+
+`ls *dat`
+there will be hbout, h (to analyse the hydrogen bonds) , rms file (to check if simulation is working well)
+
+
+######Metadynamics 
+
+2,6,8,17: they are not VMD indices
+VMD indices: 1,5,7,16
+(therefore, if you want to define atom's indices, go to VMD, take indices and always remember to add one)
+
+Sigma: width of Guassian in radius 
+biasfact (5-15 range) but recommand 15
+print age*print all arguments/variables
+stride: 
+File: Hills & Restart at the begings*
+
+post-production -> free energy surface 
+How to actually run metadynamics, and converge 
+
+*what if make a mistake?
+cannot stop and restart from scratch, 
+you need to back-up files of Hills
