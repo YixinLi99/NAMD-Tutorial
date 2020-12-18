@@ -150,3 +150,10 @@ How to actually run metadynamics, and converge
 *what if make a mistake?
 cannot stop and restart from scratch, 
 you need to back-up files of Hills
+
+```plumed on
+plumedfile plumed_dip.dat```
+
+######install Plumed 
+```./configure
+make all install```
