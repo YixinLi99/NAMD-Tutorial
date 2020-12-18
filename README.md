@@ -132,7 +132,7 @@ After Execution, you want to have a look at the files:
 there will be hbout, h (to analyse the hydrogen bonds) , rms file (to check if simulation is working well)
 
 
-######Metadynamics 
+###### Metadynamics 
 
 2,6,8,17: they are not VMD indices
 VMD indices: 1,5,7,16
@@ -151,9 +151,10 @@ How to actually run metadynamics, and converge
 cannot stop and restart from scratch, 
 you need to back-up files of Hills
 
-```plumed on
-plumedfile plumed_dip.dat```
+``` plumed on
+plumedfile plumed_dip.dat ```
 
-######install Plumed 
-```./configure
-make all install```
+###### install Plumed 
+
+``` ./configure
+make all install ```
