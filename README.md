@@ -117,15 +117,17 @@ just like I instructed you to do in the original tutorial on NAMD.
 *Another recommendation: you should not start md1 
 if you don't see the "End of Program" statement at the end of the log of md0.*
 
-- [ ] Task 4: 
+- [x] Task 4: 
 Create md2 as a restart from md1 (so that you'll have 15 ns in total) and visualise them with VMD. 
 Try to set the representation so that the entire proline dipeptide (not just the PRO) is set with "Licorice". 
 Remember: PRO is just the center residue among three, you must discover which are the resnames (or resids) of the other two, by clicking on any of their atoms in VMD.
 
-- [ ] Task 5: 
+(put dcd into pymol)
+
+- [x] Task 5: 
 Use gnuplot to make sure that the energy (u 2:12) and the temperature (u 2:13) behave as you expect. Do this for md0, md1, and md2.
 
-- [ ] Task 6: 
+- [x] Task 6: 
 Use cpptraj to calculate the rmsd and hydrogen bonds of the proline dipeptide. a useful script: 
 ```
 export AMBERHOME=/home/alessandro/Documents/amber18
