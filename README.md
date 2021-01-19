@@ -1,6 +1,6 @@
 # NAMD-Tutorials
 
-## Simulations of Dipeptide with Minimisation and Equilibrum, md0
+## Simulations of Dipeptide with Minimisation and Equilibrum, MD0
 
 ###### Step 1: Install NAMD & Dipeptide_e Files
 
@@ -67,7 +67,7 @@ gnuplot> plot "Out_md0.Dipwat.logyx.en" u 2:12
 
 ------------------------------------------------------
 
-## Simulation without the CELL
+## Simulation MD1
 
 - [x] Task3:
 Md0 minimisation of 
