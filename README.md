@@ -1,5 +1,15 @@
 # NAMD-Tutorials
 
+<filename>.psf - protein structure file. A list of the atoms, masses, charges and connections between atoms.
+
+<filename>.pdb - protein database file. The actual starting coordinates of the models. This has to be the same order as the psf file.
+
+<filename>.conf - NAMD configuration file. Tells NAMD how to run the job.
+	
+Parameters file + configuration file -> MD trajectory
+###### conf file explanation: https://www.ks.uiuc.edu/Training/Tutorials/namd/namd-tutorial-unix-html/node26.html
+###### NAMD Explained: https://sci-hub.se/https://onlinelibrary.wiley.com/doi/abs/10.1002/jcc.20289
+
 ## Simulations of Dipeptide with Minimisation and Equilibrum, MD0
 
 ###### Step 1: Install NAMD & Dipeptide_e Files
@@ -47,6 +57,12 @@ versus time and total energy versus time
 (for example with a software like gnuplot) it would be great, 
 otherwise just get familiar with them for now.
 
+script: comment out the followings: 
+```
+#   binCoordinates         ./md0.Dipwat.restart.coor
+#   binVelocities          ./md0.Dipwat.restart.vel
+#   extendedSystem
+```
 ###### Step 1: Install Gnuplot
 
 ```
@@ -67,7 +83,18 @@ gnuplot> plot "Out_md0.Dipwat.logyx.en" u 2:12
 
 ------------------------------------------------------
 
-## Simulation MD1
+## Simulation MD1 (production run)
+
+
+script: comment out the followings: 
+```
+# temperature         $temperature
+#   set a 33.6
+#   set b 33.0
+#   set c 33.3
+
+# PME
+```
 
 - [x] Task3:
 Md0 minimisation of 
@@ -131,8 +158,9 @@ After Execution, you want to have a look at the files:
 `ls *dat`
 there will be hbout, h (to analyse the hydrogen bonds) , rms file (to check if simulation is working well)
 
+MD2: same protocol 
 
-###### Metadynamics 
+## Metadynamics 
 
 2,6,8,17: they are not VMD indices
 VMD indices: 1,5,7,16
@@ -142,7 +170,7 @@ Sigma: width of Guassian in radius
 biasfact (5-15 range) but recommand 15
 print age*print all arguments/variables
 stride: 
-File: Hills & Restart at the begings*
+File: Hills & Restart at the beginings*
 
 post-production -> free energy surface 
 How to actually run metadynamics, and converge 
