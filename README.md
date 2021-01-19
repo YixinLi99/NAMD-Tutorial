@@ -126,7 +126,7 @@ Remember: PRO is just the center residue among three, you must discover which ar
 Use gnuplot to make sure that the energy (u 2:12) and the temperature (u 2:13) behave as you expect. Do this for md0, md1, and md2.
 
 - [ ] Task 6: 
-Use cpptraj to calculate the rmsd and hydrogen bonds of the proline dipeptide. I am attaching a useful script that can be used.
+Use cpptraj to calculate the rmsd and hydrogen bonds of the proline dipeptide. a useful script: 
 ```
 export AMBERHOME=/home/alessandro/Documents/amber18
 source $AMBERHOME/amber.sh
