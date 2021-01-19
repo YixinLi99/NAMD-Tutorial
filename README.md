@@ -156,7 +156,7 @@ To activate AmberTools20, you just simply need to type:
 After Execution, you want to have a look at the files:
 
 `ls *dat`
-there will be hbout, h (to analyse the hydrogen bonds) , rms file (to check if simulation is working well)
+there will be: hbout_dipeptide.dat, hbavg_dipeptide.dat (to analyse the hydrogen bonds) , rmsd_dipeptide.dat(to check if simulation is working well)
 
 MD2: same protocol 
 
