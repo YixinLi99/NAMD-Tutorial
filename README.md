@@ -129,6 +129,7 @@ Use gnuplot to make sure that the energy (u 2:12) and the temperature (u 2:13) b
 Use cpptraj to calculate the rmsd and hydrogen bonds of the proline dipeptide. a useful script: 
 ```
 export AMBERHOME=/home/alessandro/Documents/amber18
+
 source $AMBERHOME/amber.sh
 (please, modify "/home/alessandro/Documents/amber18" with the appropriate path)
 
@@ -159,8 +160,22 @@ After Execution, you want to have a look at the files:
 there will be: hbout_dipeptide.dat, hbavg_dipeptide.dat (to analyse the hydrogen bonds) , rmsd_dipeptide.dat(to check if simulation is working well)
 
 MD2: same protocol 
+- [ ] Task 7: How to run MD on rosalind?
+See also: Tutorial on Rosalind
 
 ## Metadynamics 
+
+Input: 
+``` mtd0.Dipwat.conf 
+md0.Dipwat.restart.coor
+md0.Dipwat.restart.vel
+md0.Dipwat.restart.xsc
+```
+Output: 
+```
+COLVAR
+HILLS
+```
 
 2,6,8,17: they are not VMD indices
 VMD indices: 1,5,7,16
