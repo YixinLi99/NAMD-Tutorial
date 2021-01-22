@@ -212,3 +212,8 @@ here's the script for the calculation of the free energy surface (FES). As a fun
 Ideally, you may want to have an error on the free energy surface, and this is done with the block analysis, which I will explain another time.
 Do at least 40 ns of metadynamics for this. Again, very important, add the RESTART keyword at the beginning of the plumed.dat file if you are doing a restart, and keep in mind that HILLS and COLVAR may be wrongly overwritten if a restart needs to be redone, so please create safe-copies of both files after every restart.
 
+Plot: 
+``` plot 'COLVAR' u ($1*0.001):2
+set ylabel '{/Symbol x}'
+```
+
