@@ -105,7 +105,7 @@ Create md1 and simulate from md0
 Create a new md1 file via terminal:
 `touch file_name.conf`
 
-#### Instructions：
+### Instructions：
 create a md1 conf file, to be a simulation that would 
 restart after the end of md0. 
 To do so,
@@ -140,7 +140,7 @@ and then to execute cpptraj itself:
 $AMBERHOME/bin/cpptraj -i example.cpptraj
 ```
 
-#### Install AmberTools 
+### Install AmberTools 
 make sure you've installed conda (which I did)
 
 ```conda create --name AmberTools20```
@@ -231,12 +231,12 @@ set ylabel '{/Symbol x}'
 review the progress you have made in the proline dipeptide simulations (MD and metadynamics) 
 
 Please prepare a few figures to show what you have done: 
-- [] monitoring the torsional angles used as CV in the MD and metadynamics to see the difference and the convergence and the free energy surface
-- [] if you have also done the #projection that would be also good
+- [ ] monitoring the torsional angles used as CV in the MD and metadynamics to see the difference and the convergence and the free energy surface
+- [ ] if you have also done the #projection that would be also good
 (I attach a couple of paper where the proline dipeptide has been studies)
-- [] #hydrogen bonds in the MD (eg proline and water) or #g(r), but these are also quantities that can be of interest.
+- [ ] #hydrogen bonds in the MD (eg proline and water) or #g(r), but these are also quantities that can be of interest.
 
-- [] monitor as a function of time the torsional angle that determines the orientation of the rotatable phenyl (see attachment), as this is what needs to be biased in metadynamics
+- [ ] monitor as a function of time the torsional angle that determines the orientation of the rotatable phenyl (see attachment), as this is what needs to be biased in metadynamics
 
 The phenyl also swings and you can find another angle to describe that motion or other motions you can see if you visualize the trajectories (the other figures have some ideas; you do not have to monitor all but chose the most representative(s) according to the motion in the MD).
 
