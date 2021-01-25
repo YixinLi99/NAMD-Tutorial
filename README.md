@@ -218,4 +218,10 @@ plot 'COLVAR' u ($1*0.001):2
 set ylabel '{/Symbol x}'
 
 ```
+At tomorrow morning meeting we will review the progress you have made in the proline dipeptide simulations (MD and metadynamics) which should have finished by now, and your respective projects that should have been started.
 
+Please prepare a few figures to show what you have done, like monitoring the torsional angles used as CV in the MD and metadynamics to see the difference and the convergence and the free energy surface (if you have also done the #projection that would be also good). I attach a couple of paper where the proline dipeptide has been studies.
+
+I do not know if you have also look at #hydrogen bonds in the MD (eg proline and water) or #g(r), but these are also quantities that can be of interest.
+
+For the rotor, if Yixin has done MD, it would be good to monitor as a function of time the torsional angle that determines the orientation of the rotatable phenyl (see attachment), as this is what needs to be biased in metadynamics. The phenyl also swings and you can find another angle to describe that motion or other motions you can see if you visualize the trajectories (the other figures have some ideas; you do not have to monitor all but chose the most representative(s) according to the motion in the MD).
