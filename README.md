@@ -63,7 +63,7 @@ script: comment out the followings:
 #   binVelocities          ./md0.Dipwat.restart.vel
 #   extendedSystem
 ```
-##### Step 1: Install Gnuplot
+###### Step 1: Install Gnuplot
 
 ```
 /bin/zsh -c "$(curl -fsSL https://gitee.com/cunkai/HomebrewCN/raw/master/Homebrew.sh)"
@@ -74,7 +74,7 @@ brew install gnuplot
 ```
 	> http://people.duke.edu/~hpgavin/gnuplot.html
 
-##### Step 1: Enter Gnuplot and Plot
+###### Step 1: Enter Gnuplot and Plot
 
 ```
 (base) Yixins-MacBook-Pro-2:dipeptide_e yixinli$ gnuplot
@@ -105,7 +105,7 @@ Create md1 and simulate from md0
 Create a new md1 file via terminal:
 `touch file_name.conf`
 
-##### Instructions：
+#### Instructions：
 create a md1 conf file, to be a simulation that would 
 restart after the end of md0. 
 To do so,
@@ -140,7 +140,7 @@ and then to execute cpptraj itself:
 $AMBERHOME/bin/cpptraj -i example.cpptraj
 ```
 
-##### Install AmberTools 
+#### Install AmberTools 
 make sure you've installed conda (which I did)
 
 ```conda create --name AmberTools20```
@@ -226,7 +226,7 @@ plot 'COLVAR' u ($1*0.001):2
 set ylabel '{/Symbol x}'
 ```
 
-##### Key Takeways for Data Analysis for NAMD Tutorial
+## Key Takeways for Data Analysis for NAMD Tutorial
 
 review the progress you have made in the proline dipeptide simulations (MD and metadynamics) 
 
