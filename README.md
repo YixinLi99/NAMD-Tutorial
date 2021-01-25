@@ -207,21 +207,32 @@ make all install ```
 
 ###### Metadynamics - Calcaulations of the free energy surface (FES)
 
-here's the script for the calculation of the free energy surface (FES). As a function of two variables, it will need to be plotted with "splot" in gnuplot. In order to have it on 2D, and with the z dimension as colours, use "**set pm3d map**". In case of doubt, gnuplot is very well supported online.
+script for the calculation of the free energy surface (FES) (named: hills_script.sh) 
+FES as a function of two variables, it will need to be plotted with ```splot``` in gnuplot. In order to have it on 2D, and with the z dimension as colours, use ```set pm3d map```
 
 Ideally, you may want to have an error on the free energy surface, and this is done with the block analysis, which I will explain another time.
-Do at least 40 ns of metadynamics for this. Again, very important, add the RESTART keyword at the beginning of the plumed.dat file if you are doing a restart, and keep in mind that HILLS and COLVAR may be wrongly overwritten if a restart needs to be redone, so please create safe-copies of both files after every restart.
+
+Noticeable: Do at least 40 ns of metadynamics; Again, very important, add the RESTART keyword at the beginning of the plumed.dat file if you are doing a restart, and keep in mind that HILLS and COLVAR may be wrongly overwritten if a restart needs to be redone, so please create safe-copies of both files after every restart.
 
 Plot: 
+
 ``` 
 plot 'COLVAR' u ($1*0.001):2
 set ylabel '{/Symbol x}'
-
 ```
-At tomorrow morning meeting we will review the progress you have made in the proline dipeptide simulations (MD and metadynamics) which should have finished by now, and your respective projects that should have been started.
 
-Please prepare a few figures to show what you have done, like monitoring the torsional angles used as CV in the MD and metadynamics to see the difference and the convergence and the free energy surface (if you have also done the #projection that would be also good). I attach a couple of paper where the proline dipeptide has been studies.
+###### Key Takeways for Data Analysis for NAMD Tutorial
 
-I do not know if you have also look at #hydrogen bonds in the MD (eg proline and water) or #g(r), but these are also quantities that can be of interest.
+review the progress you have made in the proline dipeptide simulations (MD and metadynamics) 
 
-For the rotor, if Yixin has done MD, it would be good to monitor as a function of time the torsional angle that determines the orientation of the rotatable phenyl (see attachment), as this is what needs to be biased in metadynamics. The phenyl also swings and you can find another angle to describe that motion or other motions you can see if you visualize the trajectories (the other figures have some ideas; you do not have to monitor all but chose the most representative(s) according to the motion in the MD).
+Please prepare a few figures to show what you have done: 
+- [] monitoring the torsional angles used as CV in the MD and metadynamics to see the difference and the convergence and the free energy surface
+- [] if you have also done the #projection that would be also good
+(I attach a couple of paper where the proline dipeptide has been studies)
+- [] #hydrogen bonds in the MD (eg proline and water) or #g(r), but these are also quantities that can be of interest.
+
+- [] monitor as a function of time the torsional angle that determines the orientation of the rotatable phenyl (see attachment), as this is what needs to be biased in metadynamics
+
+The phenyl also swings and you can find another angle to describe that motion or other motions you can see if you visualize the trajectories (the other figures have some ideas; you do not have to monitor all but chose the most representative(s) according to the motion in the MD).
+
+-> phenyl motions: rotation (torsional angle) & swing (__) 
