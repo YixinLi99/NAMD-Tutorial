@@ -184,17 +184,22 @@ VMD indices: 1,5,7,16
 (therefore, if you want to define atom's indices, go to VMD, take indices and always remember to add one)
 
 Sigma: width of Guassian in radius 
+
 biasfact (5-15 range) but recommand 15
+
 print age*print all arguments/variables
+
 stride: 
+
 File: Hills & Restart at the beginings*
 
 post-production -> free energy surface 
+
 How to actually run metadynamics, and converge 
 
 *what if make a mistake?
-cannot stop and restart from scratch, 
-you need to back-up files of Hills
+Again, very important, add the RESTART keyword at the beginning of the plumed.dat file if you are doing a restart, and keep in mind that HILLS and COLVAR may be wrongly overwritten if a restart needs to be redone, so please create safe-copies of both files after every restart.
+you need also back up your files
 
 ``` plumed on
 plumedfile plumed_dip.dat ```
@@ -212,7 +217,7 @@ FES as a function of two variables, it will need to be plotted with ```splot``` 
 
 Ideally, you may want to have an error on the free energy surface, and this is done with the block analysis, which I will explain another time.
 
-Noticeable: Do at least 40 ns of metadynamics; Again, very important, add the RESTART keyword at the beginning of the plumed.dat file if you are doing a restart, and keep in mind that HILLS and COLVAR may be wrongly overwritten if a restart needs to be redone, so please create safe-copies of both files after every restart.
+Noticeable: Do at least 40 ns of metadynamics
 
 Plot: 
 
