@@ -228,6 +228,11 @@ set ylabel '{/Symbol x}'
 
 ## Key Takeways for Data Analysis for NAMD Tutorial
 
+Physical time = num_steps * timestep 
+e.g. 1000000 * 1 fs = 1000000 * 0.000001 ns = 1 ns
+
+
+
 review the progress you have made in the proline dipeptide simulations (MD and metadynamics) 
 
 Please prepare a few figures to show what you have done: 
