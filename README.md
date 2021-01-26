@@ -246,3 +246,5 @@ Please prepare a few figures to show what you have done:
 The phenyl also swings and you can find another angle to describe that motion or other motions you can see if you visualize the trajectories (the other figures have some ideas; you do not have to monitor all but chose the most representative(s) according to the motion in the MD).
 
 -> phenyl motions: rotation (torsional angle) & swing (__) 
+
+http://jswails.wikidot.com/using-gnuplot
