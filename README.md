@@ -1,13 +1,11 @@
 # NAMD-Tutorials
 
-<filename>.psf - protein structure file. A list of the atoms, masses, charges and connections between atoms.
-
-<filename>.pdb - protein database file. The actual starting coordinates of the models. This has to be the same order as the psf file.
-
+<filename>.psf - protein structure file. A list of the atoms, masses, charges and connections between atoms.  
+<filename>.pdb - protein database file. The actual starting coordinates of the models. This has to be the same order as the psf file.  
 <filename>.conf - NAMD configuration file. Tells NAMD how to run the job.
 	
-Parameters file + configuration file -> MD trajectory
-###### conf file explanation: https://www.ks.uiuc.edu/Training/Tutorials/namd/namd-tutorial-unix-html/node26.html
+Parameters file + configuration file -> MD trajectory  
+###### conf file explanation: https://www.ks.uiuc.edu/Training/Tutorials/namd/namd-tutorial-unix-html/node26.html  
 ###### NAMD Explained: https://sci-hub.se/https://onlinelibrary.wiley.com/doi/abs/10.1002/jcc.20289
 
 ## Simulations of Dipeptide with Minimisation and Equilibrum, MD0
@@ -266,42 +264,26 @@ http://jswails.wikidot.com/using-gnuplot
 ### Using VMD to plot: 
 
 ###### Load the molecule at once: 
-
-`browse` → `prmtop file` → `load`
-
-`browse` → dcd file → `load`
-
-`Frames: Load all at once` 
-
+`browse` → `prmtop file` → `load`  
+`browse` → dcd file → `load`  
+`Frames: Load all at once`   
 `load`
 
 ###### To Make Molecule Representative:
-
-`Graphics` → `Representations`
-
-(there will be a window jump out)
-
+`Graphics` → `Representations`  
+(there will be a window jump out)  
 `Drawing Method` → `CPK`
 
 ###### To make the system centred and monitor the motions: 
-
-`Extensions` → `Analysis` → `RMSD Trajectory Tool` 
-
-(there will be a window jump out)
-
-left box typing to change protein to all
-
-`ALIGH`
-
-close the window
-
+`Extensions` → `Analysis` → `RMSD Trajectory Tool`  
+(there will be a window jump out)  
+left box typing to change protein to all  
+`ALIGH`  
+close the window  
 `▶️` : the animation will move
 
 ###### Plot the dihedral angles: 
-
-`Mouse` → `Label` → `dihedrals 4`
-
-`Graphics` → `Representations` → `Selected Atoms` change all to index 24,11,10,8 (-1 from plummed.dat) → `Create Rep` → `Drawing Method` → `VDW`
-
+`Mouse` → `Label` → `dihedrals 4`  
+`Graphics` → `Representations` → `Selected Atoms` change all to index 24,11,10,8 (-1 from plummed.dat) → `Create Rep` → `Drawing Method` → `VDW`  
 `Graphics` → `Labels` → `Dihedrals` → click on the four dihedrals → `Graph` → `preview`/`save`
 
