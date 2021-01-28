@@ -177,23 +177,22 @@ COLVAR
 HILLS
 ```
 
-2,6,8,17: they are not VMD indices
-VMD indices: 1,5,7,16
+plummed.dat: 
+```
+psi: TORSION ATOMS=25,12,11,9 #they are not VMD indices; VMD indices: 24,11,10,8
 (therefore, if you want to define atom's indices, go to VMD, take indices and always remember to add one)
 
-Sigma: width of Guassian in radius 
+meta: SIGMA=0.16 #width of Guassian in radius 
+HEIGHT=0.02 #
+PACE=500 #
+BIASFACTOR=(5-15 range) #but recommand 15
 
-biasfact (5-15 range) but recommand 15
+PRINT AGE #print all arguments/variables
 
-print age*print all arguments/variables
-
-stride: 
-
-File: Hills & Restart at the beginings*
-
-post-production -> free energy surface 
-
-How to actually run metadynamics, and converge 
+STRIDE, FILE
+```
+post-production -> free energy surface  
+run metadynamics and reach converge (from graph psi vs. timestep)
 
 *what if make a mistake?
 Again, very important, add the RESTART keyword at the beginning of the plumed.dat file if you are doing a restart, and keep in mind that HILLS and COLVAR may be wrongly overwritten if a restart needs to be redone, so please create safe-copies of both files after every restart.
@@ -238,20 +237,18 @@ gnuplot> plot 'ep.xvg' u 1:2 title 'Potential' with lines linetype -1 lw 3
 
 ## Key Takeways for Data Analysis for NAMD Tutorial
 
-Physical time = num_steps * timestep 
-e.g. 1000000 * 1 fs = 1000000 * 0.000001 ns = 1 ns
-
-
+**Physical time = num_steps * timestep  
+e.g. 1000000 * 1 fs = 1000000 * 0.000001 ns = 1 ns**
 
 review the progress you have made in the proline dipeptide simulations (MD and metadynamics) 
 
 Please prepare a few figures to show what you have done: 
-- [ ] monitoring the torsional angles used as CV in the MD and metadynamics to see the difference and the convergence and the free energy surface
-- [ ] if you have also done the #projection that would be also good
+ - [x] monitoring the torsional angles used as CV in the MD and metadynamics to see the difference and the convergence and the free energy surface
+ - [ ] if you have also done the #projection that would be also good
 (I attach a couple of paper where the proline dipeptide has been studies)
-- [ ] #hydrogen bonds in the MD (eg proline and water) or #g(r), but these are also quantities that can be of interest.
+ - [ ] #hydrogen bonds in the MD (eg proline and water) or #g(r), but these are also quantities that can be of interest.
 
-- [ ] monitor as a function of time the torsional angle that determines the orientation of the rotatable phenyl (see attachment), as this is what needs to be biased in metadynamics
+ - [ ] monitor as a function of time the torsional angle that determines the orientation of the rotatable phenyl (see attachment), as this is what needs to be biased in metadynamics
 
 The phenyl also swings and you can find another angle to describe that motion or other motions you can see if you visualize the trajectories (the other figures have some ideas; you do not have to monitor all but chose the most representative(s) according to the motion in the MD).
 
