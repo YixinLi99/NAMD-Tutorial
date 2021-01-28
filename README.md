@@ -266,26 +266,42 @@ http://jswails.wikidot.com/using-gnuplot
 ### Using VMD to plot: 
 
 ###### Load the molecule at once: 
+
 `browse` → `prmtop file` → `load`
+
 `browse` → dcd file → `load`
+
 `Frames: Load all at once` 
+
 `load`
 
 ###### To Make Molecule Representative:
+
 `Graphics` → `Representations`
+
 (there will be a window jump out)
+
 `Drawing Method` → `CPK`
 
 ###### To make the system centred and monitor the motions: 
+
 `Extensions` → `Analysis` → `RMSD Trajectory Tool` 
+
 (there will be a window jump out)
+
 left box typing to change protein to all
+
 `ALIGH`
-close the window `
->` : the animation will move
+
+close the window
+
+`▶️` : the animation will move
 
 ###### Plot the dihedral angles: 
+
 `Mouse` → `Label` → `dihedrals 4`
+
 `Graphics` → `Representations` → `Selected Atoms` change all to index 24,11,10,8 (-1 from plummed.dat) → `Create Rep` → `Drawing Method` → `VDW`
+
 `Graphics` → `Labels` → `Dihedrals` → click on the four dihedrals → `Graph` → `preview`/`save`
 
