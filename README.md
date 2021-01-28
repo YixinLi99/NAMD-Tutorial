@@ -265,27 +265,27 @@ http://jswails.wikidot.com/using-gnuplot
 
 ### Using VMD to plot: 
 
-1. Load the molecule at once: 
-'browse' -> prmtop file -> 'load'
-'browse' -> dcd file -> 'load'
-'Frames: Load all at once' 
-'load'
+###### Load the molecule at once: 
+`browse` → `prmtop file` → `load`
+`browse` → dcd file → `load`
+`Frames: Load all at once` 
+`load`
 
-2. To Make Molecule Representative:
-'Graphics' -> 'Representations'
+###### To Make Molecule Representative:
+`Graphics` → `Representations`
 (there will be a window jump out)
-'Drawing Method' -> 'CPK' 
+`Drawing Method` → `CPK`
 
-3. To make the system centred and monitor the motions: 
-'Extensions' -> 'Analysis' -> 'RMSD Trajectory Tool' 
+###### To make the system centred and monitor the motions: 
+`Extensions` → `Analysis` → `RMSD Trajectory Tool` 
 (there will be a window jump out)
 left box typing to change protein to all
-'ALIGH'
-close the window 
-'>' : the animation will move
+`ALIGH`
+close the window `
+>` : the animation will move
 
-4. Plot the dihedral angles: 
-'Mouse' -> 'Label' -> 'dihedrals 4'
-'Graphics' -> 'Representations' -> 'Selected Atoms' change all to index 24,11,10,8 (-1 from plummed.dat) -> 'Create Rep' -> 'Drawing Method' -> 'VDW'
-'Graphics' -> 'Labels' -> 'Dihedrals' -> click on the four dihedrals -> 'Graph' -> 'preview'/'save'
+###### Plot the dihedral angles: 
+`Mouse` → `Label` → `dihedrals 4`
+`Graphics` → `Representations` → `Selected Atoms` change all to index 24,11,10,8 (-1 from plummed.dat) → `Create Rep` → `Drawing Method` → `VDW`
+`Graphics` → `Labels` → `Dihedrals` → click on the four dihedrals → `Graph` → `preview`/`save`
 
