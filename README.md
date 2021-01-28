@@ -112,7 +112,7 @@ To do so,
 	comment in the first three lines (so that md1 will restart from md0);
 just like I instructed you to do in the original tutorial on NAMD.
 
-*Another recommendation: you should not start md1 
+***Another recommendation**: you should not start md1 
 if you don't see the "End of Program" statement at the end of the log of md0.*
 
 - [x] Task 4: 
@@ -120,7 +120,7 @@ Create md2 as a restart from md1 (so that you'll have 15 ns in total) and visual
 Try to set the representation so that the entire proline dipeptide (not just the PRO) is set with "Licorice". 
 Remember: PRO is just the center residue among three, you must discover which are the resnames (or resids) of the other two, by clicking on any of their atoms in VMD.
 
-(put dcd into pymol)
+**load prmtop, dcd**
 
 - [x] Task 5: 
 Use gnuplot to make sure that the energy (u 2:12) and the temperature (u 2:13) behave as you expect. Do this for md0, md1, and md2.
@@ -160,7 +160,7 @@ After Execution, you want to have a look at the files:
 there will be: hbout_dipeptide.dat, hbavg_dipeptide.dat (to analyse the hydrogen bonds) , rmsd_dipeptide.dat(to check if simulation is working well)
 
 MD2: same protocol 
-- [ ] Task 7: How to run MD on rosalind?
+- [x] Task 7: How to run MD on rosalind?
 See also: Tutorial on Rosalind
 
 ## Metadynamics 
@@ -194,7 +194,7 @@ STRIDE, FILE
 post-production -> free energy surface  
 run metadynamics and reach converge (from graph psi vs. timestep)
 
-*what if make a mistake?
+**what if make a mistake?**
 Again, very important, add the RESTART keyword at the beginning of the plumed.dat file if you are doing a restart, and keep in mind that HILLS and COLVAR may be wrongly overwritten if a restart needs to be redone, so please create safe-copies of both files after every restart.
 you need also back up your files
 
