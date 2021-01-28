@@ -274,13 +274,13 @@ http://jswails.wikidot.com/using-gnuplot
 ###### To make the system centred and monitor the motions: 
 `Extensions` → `Analysis` → `RMSD Trajectory Tool`  
 (there will be a window jump out)  
-left box typing to change protein to all  
+left box typing to change 'protein' to 'all'  
 `ALIGH`  
 close the window  
 `▶️` : the animation will move
 
 ###### Plot the dihedral angles: 
 `Mouse` → `Label` → `dihedrals 4`  
-`Graphics` → `Representations` → `Selected Atoms` change all to index 24,11,10,8 (-1 from plummed.dat) → `Create Rep` → `Drawing Method` → `VDW`  
+`Graphics` → `Representations` → `Selected Atoms` change 'all' to 'index 24 11 10 8' (-1 from plummed.dat) → `Create Rep` → `Drawing Method` → `VDW`  
 `Graphics` → `Labels` → `Dihedrals` → click on the four dihedrals → `Graph` → `preview`/`save`
 
