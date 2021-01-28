@@ -225,6 +225,18 @@ Plot:
 plot 'COLVAR' u ($1*0.001):2
 set ylabel '{/Symbol x}'
 ```
+```
+gnuplot> set title 'Energy Minimisation'
+gnuplot> set title font set ylabs
+gnuplot> set ylabel 'Potential Energy (kJ mol-1)'
+gnuplot> set ylabel font "Helvetica,14"
+gnuplot> set xlabel 'Energy Minimisation Step'
+gnuplot> set xlabel font "Helvetica,14"
+gnuplot> set label '1AKI, Steepest Decent' at screen 0.47, 0.94 font "Arial,8"
+gnuplot> replot
+gnuplot> plot 'ep.xvg' u 1:2 title 'Potential' with lines linetype -1 lw 3
+```
+
 
 ## Key Takeways for Data Analysis for NAMD Tutorial
 
@@ -248,3 +260,32 @@ The phenyl also swings and you can find another angle to describe that motion or
 -> phenyl motions: rotation (torsional angle) & swing (__) 
 
 http://jswails.wikidot.com/using-gnuplot
+
+
+
+### Using VMD to plot: 
+
+1. Load the molecule at once: 
+'browse' -> prmtop file -> 'load'
+'browse' -> dcd file -> 'load'
+'Frames: Load all at once' 
+'load'
+
+2. To Make Molecule Representative:
+'Graphics' -> 'Representations'
+(there will be a window jump out)
+'Drawing Method' -> 'CPK' 
+
+3. To make the system centred and monitor the motions: 
+'Extensions' -> 'Analysis' -> 'RMSD Trajectory Tool' 
+(there will be a window jump out)
+left box typing to change protein to all
+'ALIGH'
+close the window 
+'>' : the animation will move
+
+4. Plot the dihedral angles: 
+'Mouse' -> 'Label' -> 'dihedrals 4'
+'Graphics' -> 'Representations' -> 'Selected Atoms' change all to index 24,11,10,8 (-1 from plummed.dat) -> 'Create Rep' -> 'Drawing Method' -> 'VDW'
+'Graphics' -> 'Labels' -> 'Dihedrals' -> click on the four dihedrals -> 'Graph' -> 'preview'/'save'
+
