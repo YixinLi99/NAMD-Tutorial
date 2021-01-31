@@ -284,3 +284,29 @@ close the window
 `Graphics` → `Representations` → `Selected Atoms` change 'all' to 'index 24 11 10 8' (-1 from plummed.dat) → `Create Rep` → `Drawing Method` → `VDW`  
 `Graphics` → `Labels` → `Dihedrals` → click on the four dihedrals → `Graph` → `preview`/`save`
 
+
+###### How to Identity the Cell Periodic Boundary Condition: 
+`Extension` → `Tk Console` 
+```
+buffer line limit: 512   max line length: unlimited
+Main console display active (Tcl8.6.11 / Tk8.6.11)
+(yixinli) 1 % set all [atomselect top "all"]
+atomselect0
+(yixinli) 5 % puts "[measure minmax $all]"
+{2.4590001106262207 2.4590001106262207 2.4590001106262207} {11.288999557495117 11.616000175476074 6.377999782562256}
+#{x_min y_min z_min} {x_max y_max z_max}
+(yixinli) 6 % puts "[measure center $all]"
+6.8668389320373535 7.750032424926758 4.440515995025635
+
+```
+###### To Calculation on conf file: 
+temperature         $temperature
+  set a 26.489 (= x_max - x_min * 3/4/... and > cutoff)
+  set b 27.47 (= y_max - y_min * 3/4/... and > cutoff)
+  set c 11.756 (= z_max - z_min * 3/4/... and > cutoff)
+cellBasisVector1 $a 0 0
+cellBasisVector2 0 $b 0
+cellBasisVector3 0 0 $c
+  cellOrigin 6.8668389320373535 7.750032424926758 4.440515995025635
+  
+  cutoff              10.0
