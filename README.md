@@ -300,13 +300,13 @@ atomselect0
 
 ```
 ###### To Calculation on conf file: 
-temperature         $temperature
-  set a 26.489 (= x_max - x_min * 3/4/... and > cutoff)
-  set b 27.47 (= y_max - y_min * 3/4/... and > cutoff)
-  set c 11.756 (= z_max - z_min * 3/4/... and > cutoff)
-cellBasisVector1 $a 0 0
-cellBasisVector2 0 $b 0
-cellBasisVector3 0 0 $c
-  cellOrigin 6.8668389320373535 7.750032424926758 4.440515995025635
-  
+temperature         $temperature  
+  set a 26.489 (= x_max - x_min * 3/4/... and > cutoff)    
+  set b 27.47 (= y_max - y_min * 3/4/... and > cutoff)  
+  set c 11.756 (= z_max - z_min * 3/4/... and > cutoff)  
+cellBasisVector1 $a 0 0  
+cellBasisVector2 0 $b 0  
+cellBasisVector3 0 0 $c  
+  cellOrigin 6.8668389320373535 7.750032424926758 4.440515995025635  
+    
   cutoff              10.0
