@@ -300,6 +300,7 @@ atomselect0
 
 ```
 ###### To Calculation on conf file: 
+```
 temperature         $temperature  
   set a 26.489 (= x_max - x_min * 3/4/... and > cutoff)    
   set b 27.47 (= y_max - y_min * 3/4/... and > cutoff)  
@@ -310,3 +311,12 @@ cellBasisVector3 0 0 $c
   cellOrigin 6.8668389320373535 7.750032424926758 4.440515995025635  
     
   cutoff              10.0
+```
+
+### Using VMD to manipulate molecules: 
+
+###### To manipulate the dihedral angels 
+`Extensions` → `Modeling` → `Molefracture`
+`File` → `New molecule` → `From selection` → type 'all' in the `selection` section → `Start Molefracture`
+`OpenGL Display` → tab 'shift' on keyboard to select index on OpenGL Display → `Dihedral Angles` → `Move` → `Angles`
+
