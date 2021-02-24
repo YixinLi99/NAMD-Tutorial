@@ -321,3 +321,30 @@ cellBasisVector3 0 0 $c
 `OpenGL Display` → tab 'shift' on keyboard to select index on OpenGL Display → `Dihedral Angles` → `Move` → `Angles`
 
 Useful Link: https://www.ks.uiuc.edu/Training/Tutorials/vmd-molefacture/tutorial-Molefacture.pdf
+
+### Using GNUPLOT to visualise the histogram of dihedral angles: 
+
+```
+set boxwidth 1
+set style fill solid 0.5
+set grid ytics
+bin_width=2
+bin_number(x)=floor(x/bin_width)
+rounded(x)=bin_width*(bin_number(x)+0.3)
+plot 'Prod1_dihedralangle.dat' u (rounded($2)):(1) smooth frequency w boxes t "frequency"
+```
+-or-
+```
+gnuplot> clear
+gnuplot> reset
+gnuplot> set key off
+gnuplot> set border 3
+gnuplot> set boxwidth 0.5 absolute
+gnuplot> set style fill solid 1.0 noborder
+gnuplot> bin_width=2
+gnuplot> bin_number(x)=floor(x/bin_width)
+gnuplot> rounded(x)=bin_width*(bin_number(x)+0.3)
+gnuplot> plot 'Prod1_dihedralangle.dat' u (rounded($2)):(1) smooth frequency with boxes
+```
+
+useful link: http://psy.swansea.ac.uk/staff/carter/gnuplot/gnuplot_frequency.htm
