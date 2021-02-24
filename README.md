@@ -320,3 +320,4 @@ cellBasisVector3 0 0 $c
 `File` → `New molecule` → `From selection` → type 'all' in the `selection` section → `Start Molefracture`   
 `OpenGL Display` → tab 'shift' on keyboard to select index on OpenGL Display → `Dihedral Angles` → `Move` → `Angles`
 
+Useful Link: https://www.ks.uiuc.edu/Training/Tutorials/vmd-molefacture/tutorial-Molefacture.pdf
