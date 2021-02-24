@@ -316,7 +316,7 @@ cellBasisVector3 0 0 $c
 ### Using VMD to manipulate molecules: 
 
 ###### To manipulate the dihedral angels 
-`Extensions` → `Modeling` → `Molefracture`
-`File` → `New molecule` → `From selection` → type 'all' in the `selection` section → `Start Molefracture`
+`Extensions` → `Modeling` → `Molefracture`  
+`File` → `New molecule` → `From selection` → type 'all' in the `selection` section → `Start Molefracture`   
 `OpenGL Display` → tab 'shift' on keyboard to select index on OpenGL Display → `Dihedral Angles` → `Move` → `Angles`
 
