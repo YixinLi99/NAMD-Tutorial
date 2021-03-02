@@ -405,3 +405,12 @@ gnuplot> plot "18Prods_dihedralangles.dat" u (bin($2, binwidth)):(1.0/(binwidth*
 ```
 
 https://stackoverflow.com/questions/5787096/normalizing-histogram-bins-in-gnuplot
+
+Since the output plot is asymmetrical:
+- [ ] Parameters symmetry check 
+- [ ] temperature cehck: Potential Energy Surface
+- [ ] Free Energy Surface
+
+### How to plot Potential Energy Surface: 
+install pardED: installed from https://github.com/ParmEd/ParmEd/releases/tag/3.4.0
+transfer into inpcrd files
