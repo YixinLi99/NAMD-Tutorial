@@ -367,7 +367,7 @@ Reinhold’s FF at 15 A cutoff
 
 - [ ] please plot the data with the same axis (eg 0 – 180 deg) so we can see the differences. At the moment the graphs have different axis. The histograms can also be normalized, but if they correspond to the same length of simulations (ie the same number of frames), that’s fine and they should be directly comparable.
 
-####### Normalised Plot of Histogram 
+###### Normalised Plot of Histogram 
 ```
 gnuplot> binwidth = 0.1
 gnuplot> set boxwidth binwidth
