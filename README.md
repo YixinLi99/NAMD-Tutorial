@@ -357,6 +357,8 @@ e.g. (10000000 * 18) * 2 = 360000000 fs = 360 ns
 (10000000 * 14) * 2 = 280 ns
 ten million
 
+dat output: 35999 = 36000 
+
 - [ ] Can you out all the data of the production runs together and have one histogram per set of simulations?
 
 The histograms seem to be plotted for different MD runs. They seem to give a different profile for the two force fields, with the Reinhold less peaked at 90 deg, although a bit asymmetric
@@ -374,4 +376,32 @@ Reinhold’s FF at 15 A cutoff
 
 - [ ] please plot the data with the same axis (eg 0 – 180 deg) so we can see the differences. At the moment the graphs have different axis. The histograms can also be normalized, but if they correspond to the same length of simulations (ie the same number of frames), that’s fine and they should be directly comparable.
 
- 
+Normalised Plot of Histogram 
+```
+gnuplot> binwidth = 0.1
+gnuplot> set boxwidth binwidth
+gnuplot> sum = 0
+gnuplot> s(x) = ((sum=sum+1), 0)
+gnuplot> bin(x, width) = width*floor(x/width) + binwidth/2.0
+gnuplot> plot "18Prods_dihedralangles.dat" u ($1):(s($1))
+gnuplot> plot "18Prods_dihedralangles.dat" u (bin($2, binwidth)):(1.0/(binwidth*sum)) smooth freq w boxes
+gnuplot> binwidth = 0.05
+gnuplot> set xrange [0:180]
+gnuplot> binwidth=2
+gnuplot> replot
+
+
+gnuplot> set key off
+gnuplot> set border 3
+gnuplot> set boxwidth 0.5 absolute
+gnuplot> set style fill solid 1.0 noborder
+gnuplot> binwidth=2
+gnuplot> sum = 0
+gnuplot> s(x) = ((sum=sum+1), 0)
+gnuplot> bin(x, width) = width*floor(x/width) + binwidth/2.0
+gnuplot> set xrange [0:180]
+gnuplot> plot "18Prods_dihedralangles.dat" u ($2):(s($2))
+gnuplot> plot "18Prods_dihedralangles.dat" u (bin($2, binwidth)):(1.0/(binwidth*sum)) smooth freq w boxes
+```
+
+https://stackoverflow.com/questions/5787096/normalizing-histogram-bins-in-gnuplot
