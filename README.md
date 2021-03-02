@@ -350,6 +350,13 @@ gnuplot> plot 'Prod1_dihedralangle.dat' u (rounded($2)):(1) smooth frequency wit
 useful link: http://psy.swansea.ac.uk/staff/carter/gnuplot/gnuplot_frequency.htm
 
 - [ ] how maany nanoseconds? How long your production runs? 
+
+= Physical time = num_steps * timestep
+e.g. (10000000 * 18) * 2 = 360000000 fs = 360 ns 
+
+(10000000 * 14) * 2 = 280 ns
+ten million
+
 - [ ] Can you out all the data of the production runs together and have one histogram per set of simulations?
 
 The histograms seem to be plotted for different MD runs. They seem to give a different profile for the two force fields, with the Reinhold less peaked at 90 deg, although a bit asymmetric
