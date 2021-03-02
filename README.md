@@ -348,3 +348,23 @@ gnuplot> plot 'Prod1_dihedralangle.dat' u (rounded($2)):(1) smooth frequency wit
 ```
 
 useful link: http://psy.swansea.ac.uk/staff/carter/gnuplot/gnuplot_frequency.htm
+
+- [ ] how maany nanoseconds? How long your production runs? 
+- [ ] Can you out all the data of the production runs together and have one histogram per set of simulations?
+
+The histograms seem to be plotted for different MD runs. They seem to give a different profile for the two force fields, with the Reinhold less peaked at 90 deg, although a bit asymmetric
+
+Ie Bethan’s FF at 10 A cutoff
+
+Bethan’s FF at 15 A cutoff
+
+Reinhold’s  FF at 10 A cutoff
+
+Reinhold’s FF at 15 A cutoff
+
+- [ ] The results should also be compared with a potential energy profile along the rotation (Bethan has one for her force field but it should also be done for Reinhold’s one to see whether there is any asymmetry which is what some of your data suggest).
+
+
+- [ ] please plot the data with the same axis (eg 0 – 180 deg) so we can see the differences. At the moment the graphs have different axis. The histograms can also be normalized, but if they correspond to the same length of simulations (ie the same number of frames), that’s fine and they should be directly comparable.
+
+ 
