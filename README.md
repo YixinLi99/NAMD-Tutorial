@@ -403,5 +403,5 @@ Since the output plot is asymmetrical:
 - [ ] Free Energy Surface
 
 ### How to plot Potential Energy Surface: 
-install pardED: installed from https://github.com/ParmEd/ParmEd/releases/tag/3.4.0
-transfer into inpcrd files
+Install pardED: installed from https://github.com/ParmEd/ParmEd/releases/tag/3.4.0
+Transfer into inpcrd files
