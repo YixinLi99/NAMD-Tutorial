@@ -443,3 +443,13 @@ gnuplot> set xlabel 'Output Frequency'
 gnuplot> set ylabel 'Dihedral Angles (deg)'
 gnuplot> plot '0.dat' title 'Dihedral Angles'
 ```
+
+or: 
+
+```
+gnuplot> set title 'Potential Energy Under Minimisation for 0 deg with 30000 Restraints'
+gnuplot> set title font "Helvetica,14"
+gnuplot> set xlabel 'Timesteps'
+gnuplot> set ylabel 'Potential Energy'
+gnuplot> plot '0.en' u 2:14 title 'Potential Energy'
+```
