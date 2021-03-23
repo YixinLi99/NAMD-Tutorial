@@ -403,5 +403,43 @@ Since the output plot is asymmetrical:
 - [ ] Free Energy Surface
 
 ### How to plot Potential Energy Surface: 
-Install pardED: installed from https://github.com/ParmEd/ParmEd/releases/tag/3.4.0
+Install parmED: installed from https://github.com/ParmEd/ParmEd/releases/tag/3.4.0
 Transfer into inpcrd files
+
+get restraint files: 
+import prmtop and pdb files
+go to tkconsole: 
+```
+set all [atomselect top "all"] 
+
+set sel [atomselect top "index 8 10 11 24”]
+
+$all set beta 0.0 
+
+$sel set beta 1.0
+
+$all writepdb restraint.pdb
+
+source ~/ParmEd/Masters5_Dihedral_Angles/tcl
+```
+add to conf files: 
+```
+constraints on
+
+consref restraint.pdb
+
+conskfile restraint.pdb
+
+conskcol B
+
+constraintScaling 3.0
+```
+
+plot dihedral angles: 
+```
+gnuplot> set title 'Dihedral Angles Under Minimisation for 0 deg with 3000 Restraints'
+gnuplot> set title font "Helvetica,14"
+gnuplot> set xlabel 'Output Frequency'
+gnuplot> set ylabel 'Dihedral Angles (deg)'
+gnuplot> plot '0.dat' title 'Dihedral Angles'
+```
