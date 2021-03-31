@@ -453,3 +453,11 @@ gnuplot> set xlabel 'Timesteps'
 gnuplot> set ylabel 'Potential Energy'
 gnuplot> plot '0.en' u 2:14 title 'Potential Energy'
 ```
+
+```
+gnuplot> set title 'Potential Energy Plot for Bethan Forcefield'
+gnuplot> set title font "Helvetica,14"
+gnuplot> set xlabel 'Diehdral Angles'
+gnuplot> set ylabel 'Potential Energy'
+gnuplot> plot 'potential.dat'
+```
