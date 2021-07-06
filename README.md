@@ -403,12 +403,15 @@ Since the output plot is asymmetrical:
 - [ ] Free Energy Surface
 
 ### How to plot Potential Energy Surface: 
+	
+#### The first method for NAMD to add constraint: 
+	
 Install parmED: installed from https://github.com/ParmEd/ParmEd/releases/tag/3.4.0
 Transfer into inpcrd files
 
 get restraint files: 
 import prmtop and pdb files
-go to tkconsole: 
+go to VMD-tkconsole: 
 ```
 set all [atomselect top "all"] 
 
@@ -434,6 +437,10 @@ conskcol B
 
 constraintScaling 3.0
 ```
+
+#### The second Method for NAMD adding constraints: 
+- https://www.ks.uiuc.edu/Research/namd/2.9/ug/node27.html
+we chose the extraBonds comment and compare with the first method, which did not result in significant differencies 
 
 plot dihedral angles: 
 ```
