@@ -7,6 +7,7 @@
 Parameters file + configuration file -> MD trajectory  
 ###### conf file explanation: https://www.ks.uiuc.edu/Training/Tutorials/namd/namd-tutorial-unix-html/node26.html  
 ###### NAMD Explained: https://sci-hub.se/https://onlinelibrary.wiley.com/doi/abs/10.1002/jcc.20289
+###### VMD User‘s Guide
 
 ## Simulations of Dipeptide with Minimisation and Equilibrum, MD0
 
