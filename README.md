@@ -469,3 +469,7 @@ gnuplot> set xlabel 'Diehdral Angles'
 gnuplot> set ylabel 'Potential Energy'
 gnuplot> plot 'potential.dat'
 ```
+
+
+#### Generating PSF file from any PDB
+https://www.iitg.ac.in/tamalb/karp/namd/psf2.html
