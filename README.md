@@ -1,4 +1,4 @@
-# NAMD-Tutorials
+# NAMD-Tutorials 2021
 
 <filename>.psf - protein structure file. A list of the atoms, masses, charges and connections between atoms.  
 <filename>.pdb - protein database file. The actual starting coordinates of the models. This has to be the same order as the psf file.  
@@ -471,5 +471,13 @@ gnuplot> plot 'potential.dat'
 ```
 
 
+# NAMD-Tutorials 2022-03
+## Chemical Structure
+Chemical Stucture -> Avogadro -> pdb files
+## Preparation of Files 
+pdb files -> 
+## Simulations of Dipeptide with Minimisation and Equilibrum, MD0
 #### Generating PSF file from any PDB
 https://www.iitg.ac.in/tamalb/karp/namd/psf2.html
+	
+
