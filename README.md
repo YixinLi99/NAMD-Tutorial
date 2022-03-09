@@ -480,4 +480,7 @@ pdb files ->
 #### Generating PSF file from any PDB
 https://www.iitg.ac.in/tamalb/karp/namd/psf2.html
 	
-
+#### Install AmberTools
+1. Install miniconda
+2. 
+```/Users/yixinli/Desktop/miniconda3/condabin/conda install -c conda-forge ambertools=21 compilers```
