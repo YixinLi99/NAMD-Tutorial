@@ -472,6 +472,8 @@ gnuplot> plot 'potential.dat'
 
 
 # NAMD-Tutorials 2022-03
+NAMD Tutorial File：https://www.ks.uiuc.edu/Training/Tutorials/namd/namd-tutorial-win.pdf
+NAMD User Guide：https://www.ks.uiuc.edu/Research/namd/2.6/ug.pdf
 ## Chemical Structure
 Chemical Stucture -> Avogadro -> pdb files
 ## Preparation of Files: 
