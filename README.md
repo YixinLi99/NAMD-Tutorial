@@ -480,12 +480,17 @@ Chemical Stucture -> Avogadro -> pdb files
 from https://tsiangsun.github.io/programming/Amber-setup-prmtop-inpdrd/
 amber doc: http://ambermd.org/doc12/Amber20.pdf
 ![amber](https://user-images.githubusercontent.com/74641841/157415147-6e83c64e-8e0a-441c-8d36-56d94c29eeac.png)
-convert pdb files → antechamber → mol2 file by ```$ antechamber -i md0.AQx-2.pdb -fi mpdb -o md0.AQx-2.mol2 -fo mol2 -c bcc -rn AQx-2"```
-convert mol2 file → parmchk2 → frcmod by ```$ parmchk -i md0.AQx-2.mol2 -f mol2 -o md0.AQx-2.frcmod -a Y```
+convert pdb files → antechamber → mol2 file by ```$ antechamber -i md0.AQx-2.pdb -fi mpdb -o md0.AQx-2.mol2 -fo mol2 -c bcc -rn AQx-2"``` 
+convert mol2 file → parmchk2 → frcmod by ```$ parmchk -i md0.AQx-2.mol2 -f mol2 -o md0.AQx-2.frcmod -a Y``` 
 $ vmd xx.mol2  (view graphics of molecule)
 convert mol2 + frcmod file → 'tleap' → prm + inp file by
-'''tleap
+'''
+tleap
 > source leaprc.gaff
+> xxx = loadmol2       AQx-2.mol2
+> loadamberparams      AQx-2.frcmod
+> BULK = loadpdb       AQx-2.pdb
+> saveAmberParam       BULK       AQx-2.prmtop      AQx-2.inpcrd
 '''
 
 ## Simulations of Dipeptide with Minimisation and Equilibrum, MD0
