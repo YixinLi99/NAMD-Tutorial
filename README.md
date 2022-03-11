@@ -484,6 +484,7 @@ convert pdb files → antechamber → mol2 file by ```$ antechamber -i md0.AQx-2
 convert mol2 file → parmchk2 → frcmod by ```$ parmchk -i md0.AQx-2.mol2 -f mol2 -o md0.AQx-2.frcmod -a Y``` 
 $ vmd xx.mol2  (view graphics of molecule)
 convert mol2 + frcmod file → 'tleap' → prm + inp file by
+
 '''
 tleap
 > source leaprc.gaff
@@ -494,6 +495,7 @@ tleap
 > saveoff SUS sus.lib
 > saveAmberParm       SUS       AQx-2.prmtop      AQx-2.inpcrd
 '''
+	
 李继存AMBER教程：https://blog.sciencenet.cn/home.php?mod=space&uid=548663&do=blog&id=1092995
 	
 ## Simulations of Dipeptide with Minimisation and Equilibrum, MD0
