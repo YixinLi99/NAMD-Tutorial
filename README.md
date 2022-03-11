@@ -488,12 +488,16 @@ convert mol2 + frcmod file → 'tleap' → prm + inp file by
 tleap
 > source leaprc.gaff
 > xxx = loadmol2       AQx-2.mol2
+> check xxx
 > loadamberparams      AQx-2.frcmod
-> BULK = loadpdb       AQx-2.pdb
-> saveAmberParam       BULK       AQx-2.prmtop      AQx-2.inpcrd
+> check xxx
+> saveoff SUS sus.lib
+> saveAmberParm       SUS       AQx-2.prmtop      AQx-2.inpcrd
 '''
-
+李继存AMBER教程：https://blog.sciencenet.cn/home.php?mod=space&uid=548663&do=blog&id=1092995
+	
 ## Simulations of Dipeptide with Minimisation and Equilibrum, MD0
 #### Generating PSF file from any PDB
 https://www.iitg.ac.in/tamalb/karp/namd/psf2.html
+	
 ```
