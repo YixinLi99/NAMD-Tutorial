@@ -472,18 +472,18 @@ gnuplot> plot 'potential.dat'
 
 
 # NAMD-Tutorials 2022-03
-NAMD Tutorial File：https://www.ks.uiuc.edu/Training/Tutorials/namd/namd-tutorial-win.pdf
-NAMD User Guide：https://www.ks.uiuc.edu/Research/namd/2.6/ug.pdf
-## Chemical Structure
-Chemical Stucture -> Avogadro -> pdb files
-## Preparation of Files: 
-from https://tsiangsun.github.io/programming/Amber-setup-prmtop-inpdrd/
-amber doc: http://ambermd.org/doc12/Amber20.pdf
-![amber](https://user-images.githubusercontent.com/74641841/157415147-6e83c64e-8e0a-441c-8d36-56d94c29eeac.png)
-convert pdb files → antechamber → mol2 file by ```$ antechamber -i md0.AQx-2.pdb -fi mpdb -o md0.AQx-2.mol2 -fo mol2 -c bcc -rn AQx-2"``` 
-convert mol2 file → parmchk2 → frcmod by ```$ parmchk -i md0.AQx-2.mol2 -f mol2 -o md0.AQx-2.frcmod -a Y``` 
-$ vmd xx.mol2  (view graphics of molecule)
-convert mol2 + frcmod file → 'tleap' → prm + inp file by
+NAMD Tutorial File：https://www.ks.uiuc.edu/Training/Tutorials/namd/namd-tutorial-win.pdf  
+NAMD User Guide：https://www.ks.uiuc.edu/Research/namd/2.6/ug.pdf  
+## Chemical Structure  
+Chemical Stucture -> Avogadro -> pdb files  
+## Preparation of Files:  
+from https://tsiangsun.github.io/programming/Amber-setup-prmtop-inpdrd/  
+amber doc: http://ambermd.org/doc12/Amber20.pdf  
+![amber](https://user-images.githubusercontent.com/74641841/157415147-6e83c64e-8e0a-441c-8d36-56d94c29eeac.png)  
+convert pdb files → antechamber → mol2 file by ```$ antechamber -i md0.AQx-2.pdb -fi mpdb -o md0.AQx-2.mol2 -fo mol2 -c bcc -rn AQx-2"```   
+convert mol2 file → parmchk2 → frcmod by ```$ parmchk -i md0.AQx-2.mol2 -f mol2 -o md0.AQx-2.frcmod -a Y```  
+$ vmd xx.mol2  (view graphics of molecule)  
+convert mol2 + frcmod file → 'tleap' → prm + inp file by  
 
 '''
 tleap
@@ -496,10 +496,10 @@ tleap
 > saveAmberParm       SUS       AQx-2.prmtop      AQx-2.inpcrd
 '''
 	
-李继存AMBER教程：https://blog.sciencenet.cn/home.php?mod=space&uid=548663&do=blog&id=1092995
+李继存AMBER教程：https://blog.sciencenet.cn/home.php?mod=space&uid=548663&do=blog&id=1092995  
 	
-## Simulations of Dipeptide with Minimisation and Equilibrum, MD0
-#### Generating PSF file from any PDB
-https://www.iitg.ac.in/tamalb/karp/namd/psf2.html
+## Simulations of Dipeptide with Minimisation and Equilibrum, MD0  
+#### Generating PSF file from any PDB  
+https://www.iitg.ac.in/tamalb/karp/namd/psf2.html  
 	
 ```
