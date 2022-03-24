@@ -4,7 +4,7 @@
 <filename>.pdb - protein database file. The actual starting coordinates of the models. This has to be the same order as the psf file.  
 <filename>.conf - NAMD configuration file. Tells NAMD how to run the job.
 	
-Parameters file + configuration file -> MD trajectory  
+Parameters file + configuration file → MD trajectory  
 ###### conf file explanation: https://www.ks.uiuc.edu/Training/Tutorials/namd/namd-tutorial-unix-html/node26.html  
 ###### NAMD Explained: https://sci-hub.se/https://onlinelibrary.wiley.com/doi/abs/10.1002/jcc.20289
 ###### VMD User‘s Guide
